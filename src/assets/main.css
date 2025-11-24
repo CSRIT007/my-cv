@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+  }
+
+  /* Apply Battambang font when Khmer language is selected */
+  html.battambang-regular body,
+  html.battambang-regular {
+    font-family: "Battambang", system-ui;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-center;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0;
+  }
+
+  /* Profile Image Styles */
+  .profile-image {
+    @apply w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80;
+  }
+
+  /* Button Animation Enhancements */
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    background-size: 200% 100%;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background-size: 200% 100%;
+  }
+
+  /* Battambang Font Classes */
+  .battambang-thin {
+    font-family: "Battambang", system-ui;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  .battambang-light {
+    font-family: "Battambang", system-ui;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .battambang-regular {
+    font-family: "Battambang", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .battambang-bold {
+    font-family: "Battambang", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .battambang-black {
+    font-family: "Battambang", system-ui;
+    font-weight: 900;
+    font-style: normal;
+  }
+}
+
