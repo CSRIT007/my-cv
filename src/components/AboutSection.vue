@@ -1,7 +1,7 @@
 <template>
   <section 
     id="about" 
-    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 backdrop-blur-sm"
+    class="max-w-7xl mx-auto px-8 sm:px-0 lg:px-0 py-0 md:py-12 backdrop-blur-sm"
   >
     <h2 class="section-title">
       <ScrollTypingAnimation 
@@ -12,7 +12,7 @@
     </h2>
     
     <div class="max-w-3xl mx-auto">
-      <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+      <p class="text-sm sm:text-base md:text-lg text-center text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
         <ScrollTypingAnimation 
           :text="aboutText"
           :type-speed="30"
@@ -21,30 +21,30 @@
         />
       </p>
 
-      <div class="grid md:grid-cols-3 gap-6 mt-8">
-        <div class="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+      <div class="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 mt-8">
+        <div class="text-center p-3 sm:p-4 md:p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
           <button
             @click="openGoogleMaps"
-            class="text-[16px] font-bold text-primary-600 dark:text-primary-400 mb-2 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 cursor-pointer hover:underline hover:decoration-solid"
+            class="text-xs sm:text-sm md:text-base font-bold text-primary-600 dark:text-primary-400 mb-1 sm:mb-2 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 cursor-pointer hover:underline hover:decoration-solid"
             :title="`View ${personalInfo.location} on Google Maps`"
           >
             {{ personalInfo.location }}
           </button>
-          <div class="text-gray-600 dark:text-gray-400">{{ locationLabel }}</div>
+          <div class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">{{ locationLabel }}</div>
         </div>
 
-        <div class="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-          <div class="text-[20px] font-bold text-primary-600 dark:text-primary-400 mb-2">
+        <div class="text-center p-3 sm:p-4 md:p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <div class="text-sm sm:text-base md:text-lg font-bold text-primary-600 dark:text-primary-400 mb-1 sm:mb-2">
             {{ personalInfo.yearsOfExperience }}
           </div>
-          <div class="text-gray-600 dark:text-gray-400">{{ experienceLabel }}</div>
+          <div class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">{{ experienceLabel }}</div>
         </div>
 
-        <div class="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-          <div class="text-[16px] font-bold text-primary-600 dark:text-primary-400 mb-2">
+        <div class="text-center p-3 sm:p-4 md:p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <div class="text-xs sm:text-sm md:text-base font-bold text-primary-600 dark:text-primary-400 mb-1 sm:mb-2">
             {{ personalInfo.status }}
           </div>
-          <div class="text-gray-600 dark:text-gray-400">{{ statusLabel }}</div>
+          <div class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">{{ statusLabel }}</div>
         </div>
       </div>
     </div>

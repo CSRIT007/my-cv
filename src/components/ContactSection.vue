@@ -28,7 +28,7 @@
           </h3>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6 max-w-5xl mx-auto">
           <!-- Phone Contact -->
           <a 
             :href="`tel:${personalInfo.phone}`"
@@ -41,7 +41,7 @@
             </div>
             <div class="contact-content">
               <h4 class="contact-title">{{ phoneLabel }}</h4>
-              <p class="contact-text">{{ personalInfo.phone }}</p>
+              <p class="contact-text text-xs sm:text-sm">{{ personalInfo.phone }}</p>
             </div>
             <div class="contact-overlay"></div>
           </a>
@@ -58,7 +58,7 @@
             </div>
             <div class="contact-content">
               <h4 class="contact-title">{{ emailLabel }}</h4>
-              <p class="contact-text">{{ personalInfo.email }}</p>
+              <p class="contact-text text-xs sm:text-sm">{{ personalInfo.email }}</p>
             </div>
             <div class="contact-overlay"></div>
           </a>
@@ -241,7 +241,7 @@ const instantMessagingLabel = computed(() => contactTranslations.value.instantMe
 }
 
 .contact-title {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: #111827;
   margin-bottom: 0.5rem;
@@ -261,9 +261,19 @@ const instantMessagingLabel = computed(() => contactTranslations.value.instantMe
 }
 
 .contact-text {
-  font-size: 0.875rem;
+  font-size: 0.625rem;
   color: #6b7280;
   transition: color 0.3s ease;
+}
+
+.contact-text.text-xs {
+  font-size: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .contact-text.text-sm {
+    font-size: 0.625rem;
+  }
 }
 
 .dark .contact-text {
@@ -334,15 +344,32 @@ const instantMessagingLabel = computed(() => contactTranslations.value.instantMe
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .contact-card {
-    min-height: 140px;
+    min-height: 100px;
+    padding: 0.75rem;
   }
   
   .contact-icon-bg {
-    @apply w-12 h-12 mb-3;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
   }
   
   .contact-icon-bg svg {
-    @apply w-6 h-6;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .contact-title {
+    font-size: 0.625rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .contact-text {
+    font-size: 0.4rem;
+  }
+  
+  .contact-text.text-xs {
+    font-size: 0.35rem;
   }
 }
 

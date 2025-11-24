@@ -4,9 +4,9 @@
     <div class="fixed inset-0 z-0">
       <div class="absolute inset-0 bg-white/5 dark:bg-black/30">
         <MatrixRain 
-          :density="0.4"
+          :density="0.6"
           :speed="1.2"
-          :opacity="0.3"
+          :opacity="0.25"
         />
         
         <!-- Global theme-aware overlay -->

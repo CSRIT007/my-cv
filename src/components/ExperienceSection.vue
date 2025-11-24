@@ -87,10 +87,9 @@
 import { ref, computed } from 'vue'
 import { experience as originalExperience } from '../data/experience.js'
 import { useLanguage } from '../composables/useLanguage.js'
+import ScrollTypingAnimation from './ScrollTypingAnimation.vue'
 
-const { t } = useLanguage()
-
-const { currentLanguage } = useLanguage()
+const { t, currentLanguage } = useLanguage()
 
 // Get translated experience - reactive to language changes
 const experience = computed(() => {

@@ -6,14 +6,17 @@
       <div class="flex justify-between items-center h-16">
         <!-- Logo/Brand -->
         <div class="flex-shrink-0">
-          <a href="#hero" class="flex items-center gap-3 text-xl font-bold text-gray-600 dark:text-white-400 hover:opacity-80 transition-opacity group">
-            <img 
-              :src="profileImage" 
-              :alt="personalInfo.name" 
-              class="w-10 h-10 rounded-full dark:border-primary-400 object-cover object-left-top transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
-            />
-            <span class="hidden sm:inline">
-              Portfolio
+          <a href="#hero" class="flex items-center gap-3 text-xl font-bold text-gray-700 dark:text-white hover:opacity-80 transition-all duration-300 group">
+            <div class="relative">
+              <img 
+                :src="profileImage" 
+                :alt="personalInfo.name" 
+                class="w-10 h-10 rounded-full border-2 border-gray-200 dark:border-gray-700 object-cover object-left-top transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:border-primary-500 dark:group-hover:border-primary-400 shadow-md group-hover:shadow-lg"
+              />
+              <div class="absolute inset-0 rounded-full bg-primary-500/0 group-hover:bg-primary-500/20 transition-all duration-300 blur-sm"></div>
+            </div>
+            <span class="inline text-sm sm:text-base text-gray-800 dark:text-gray-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+              {{ personalInfo.name }}
             </span>
           </a>
         </div>

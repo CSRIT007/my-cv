@@ -22,11 +22,11 @@ let drops = []
 const props = defineProps({
   density: {
     type: Number,
-    default: 0.8
+    default: 1.2  // Increased from 0.8 for more drops
   },
   speed: {
     type: Number,
-    default: 1
+    default: 1.5  // Faster speed
   },
   opacity: {
     type: Number,
@@ -37,17 +37,16 @@ const props = defineProps({
 // Matrix characters - mix of code symbols, numbers, and special characters
 const matrixChars = [
   // Programming symbols
-  '{', '}', '[', ']', '(', ')', '<', '>', 
+
   // Numbers
-  '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-  // Letters (some)
-  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-  'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-  // Special programming characters
-  '/', '\\', '|', '-', '_', '=', '+', '*', '&', '%', '$', '#', '@', '!',
-  // Code-like symbols
-  ';', ':', '.', ',', '?', '"', "'", '`', '~', '^'
+  '0', '1'
+
 ]
+
+// Detect if device is mobile
+const isMobile = () => {
+  return window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+}
 
 const initCanvas = () => {
   const canvas = matrixCanvas.value
@@ -59,8 +58,11 @@ const initCanvas = () => {
   canvasWidth.value = window.innerWidth
   canvasHeight.value = window.innerHeight
   
-  const fontSize = 14
+  const fontSize = 20
   const columns = Math.floor(canvasWidth.value / fontSize)
+  
+  // Calculate speed multiplier for mobile (slightly slower on mobile) and desktop
+  const mobileSpeedMultiplier = isMobile() ? 0.5 : 0.6  // Faster overall
   
   // Initialize drops array
   drops.length = 0
@@ -68,7 +70,7 @@ const initCanvas = () => {
     drops.push({
       x: Math.random() * canvasWidth.value,
       y: Math.random() * canvasHeight.value * -1, // Start above screen
-      speed: Math.random() * 2 + props.speed,
+      speed: (Math.random() * 2 + props.speed) * mobileSpeedMultiplier,
       char: matrixChars[Math.floor(Math.random() * matrixChars.length)],
       opacity: Math.random() * 0.5 + 0.3
     })
@@ -113,10 +115,11 @@ const initCanvas = () => {
 
       // Reset drop when it goes off screen
       if (drop.y > canvasHeight.value + 20) {
+        const mobileSpeedMultiplier = isMobile() ? 0.4 : 1
         drop.y = Math.random() * -100 - 20
         drop.x = Math.random() * canvasWidth.value
         drop.char = matrixChars[Math.floor(Math.random() * matrixChars.length)]
-        drop.speed = Math.random() * 2 + props.speed
+        drop.speed = (Math.random() * 2 + props.speed) * mobileSpeedMultiplier
         drop.opacity = Math.random() * 0.5 + 0.3
       }
 
