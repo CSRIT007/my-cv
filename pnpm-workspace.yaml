@@ -1,8 +1,14 @@
 packages:
   - '.'
 
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+  vue-demi: true
+
 # Vercel uses pnpm with supply-chain lockfile verification enabled.
 # Disable the minimum release age gate for deterministic CI installs.
 minimumReleaseAge: 0
 minimumReleaseAgeStrict: false
-
