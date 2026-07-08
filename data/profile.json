@@ -1,0 +1,29 @@
+{
+  "personal": {
+  "name": "Moeng Kimheang",
+  "role": "Frontend Developer",
+  "roles": [
+    "Frontend Developer",
+    "Nuxt & Vue Developer",
+    "UI/UX Designer",
+    "AI & Data Enthusiast",
+    "Mobile App Developer"
+  ],
+  "tagline": "I build responsive, accessible digital products with thoughtful interfaces and maintainable code.",
+  "location": "Tuol Kouk, Phnom Penh City, Cambodia",
+  "email": "heang015873174@gmail.com",
+  "phone": "+855 962943472",
+    "yearsOfExperience": "3+",
+  "status": "Open to Opportunities",
+  "currentFocus": "Vue.js, Nuxt, and full-stack web applications with Django REST Framework and PostgreSQL",
+  "profileImage": "/images/profile.jpg",
+  "profileImageAlt": "Moeng Kimheang profile photo",
+  "cvUrl": "/Moeng-Kimheang-CV.pdf"
+  },
+  "hero": {
+    "eyebrow": "Hello, I am",
+    "rolesLabel": "Professional roles",
+    "primaryAction": "Preview CV",
+    "secondaryAction": "Contact Me"
+  }
+}

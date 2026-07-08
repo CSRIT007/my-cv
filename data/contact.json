@@ -1,0 +1,37 @@
+{
+  "title": "Contact",
+  "description": "Interested in working together or have a question? Reach out by email or connect on social media.",
+  "fields": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Your name",
+      "requiredMessage": "Name is required.",
+      "minimumLength": 2,
+      "minimumMessage": "Name must be at least 2 characters."
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "you@example.com",
+      "requiredMessage": "Email is required.",
+      "invalidMessage": "Enter a valid email address."
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "How can I help?",
+      "requiredMessage": "Message is required.",
+      "minimumLength": 10,
+      "minimumMessage": "Message must be at least 10 characters."
+    }
+  },
+  "submitLabel": "Send message",
+  "toast": {
+    "successTitle": "Message sent",
+    "errorTitle": "Unable to send message"
+  },
+  "messages": {
+    "fixFields": "Please fix the highlighted fields.",
+    "success": "Thank you. Your message has been prepared for delivery.",
+    "submitError": "Unable to send your message. Please try again later.",
+    "fallbackError": "Something went wrong. Please try again."
+  }
+}

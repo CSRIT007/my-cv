@@ -1,0 +1,78 @@
+{
+  "title": "Skills & technologies",
+  "description": "The technologies I use across web, AI, data, mobile, and product development.",
+  "countLabel": "technologies",
+  "categories": [
+  {
+    "id": "frontend",
+    "label": "Frontend Development",
+    "description": "Modern, responsive interfaces for the web.",
+    "skills": [
+      { "name": "Vue.js", "icon": "i-simple-icons-vuedotjs", "color": "#42B883" },
+      { "name": "Nuxt", "icon": "i-simple-icons-nuxt", "color": "#00DC82" },
+      { "name": "TypeScript", "icon": "i-simple-icons-typescript", "color": "#3178C6" },
+      { "name": "JavaScript", "icon": "i-simple-icons-javascript", "color": "#D6A800" },
+      { "name": "HTML5", "icon": "i-simple-icons-html5", "color": "#E34F26" },
+      { "name": "CSS", "icon": "i-simple-icons-css", "color": "#663399" },
+      { "name": "Tailwind CSS", "icon": "i-simple-icons-tailwindcss", "color": "#06B6D4" }
+    ]
+  },
+  {
+    "id": "backend",
+    "label": "Backend & Database",
+    "description": "APIs, authentication, and reliable data layers.",
+    "skills": [
+      { "name": "Django", "icon": "i-simple-icons-django", "color": "#0C7C59" },
+      { "name": "Python", "icon": "i-simple-icons-python", "color": "#3776AB" },
+      { "name": "PostgreSQL", "icon": "i-simple-icons-postgresql", "color": "#4169E1" },
+      { "name": "Axios", "icon": "i-simple-icons-axios", "color": "#5A29E4" },
+      { "name": "Postman", "icon": "i-simple-icons-postman", "color": "#FF6C37" }
+    ]
+  },
+  {
+    "id": "ai",
+    "label": "AI & Machine Learning",
+    "description": "Applied AI tools and machine-learning workflows.",
+    "skills": [
+      { "name": "OpenAI", "icon": "i-simple-icons-openai", "color": "#10A37F" },
+      { "name": "TensorFlow", "icon": "i-simple-icons-tensorflow", "color": "#FF6F00" },
+      { "name": "PyTorch", "icon": "i-simple-icons-pytorch", "color": "#EE4C2C" },
+      { "name": "Scikit-learn", "icon": "i-simple-icons-scikitlearn", "color": "#F7931E" }
+    ]
+  },
+  {
+    "id": "data-analysis",
+    "label": "Data Analysis",
+    "description": "Data preparation, exploration, and reporting.",
+    "skills": [
+      { "name": "Pandas", "icon": "i-simple-icons-pandas", "color": "#E70488" },
+      { "name": "NumPy", "icon": "i-simple-icons-numpy", "color": "#4D77CF" },
+      { "name": "Jupyter", "icon": "i-simple-icons-jupyter", "color": "#F37626" },
+      { "name": "Power BI", "icon": "i-simple-icons-powerbi", "color": "#D7A900" },
+      { "name": "Tableau", "icon": "i-simple-icons-tableau", "color": "#E97627" }
+    ]
+  },
+  {
+    "id": "mobile",
+    "label": "Mobile Development",
+    "description": "Cross-platform and native mobile foundations.",
+    "skills": [
+      { "name": "Flutter", "icon": "i-simple-icons-flutter", "color": "#02569B" },
+      { "name": "Dart", "icon": "i-simple-icons-dart", "color": "#0175C2" },
+      { "name": "Android", "icon": "i-simple-icons-android", "color": "#3DDC84" },
+      { "name": "Kotlin", "icon": "i-simple-icons-kotlin", "color": "#7F52FF" }
+    ]
+  },
+  {
+    "id": "tools",
+    "label": "Tools & Design",
+    "description": "Development, collaboration, and interface design.",
+    "skills": [
+      { "name": "Git", "icon": "i-simple-icons-git", "color": "#F05032" },
+      { "name": "GitHub", "icon": "i-simple-icons-github" },
+      { "name": "Figma", "icon": "i-simple-icons-figma", "color": "#A259FF" },
+      { "name": "Docker", "icon": "i-simple-icons-docker", "color": "#2496ED" }
+    ]
+  }
+  ]
+}

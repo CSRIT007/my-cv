@@ -1,0 +1,36 @@
+{
+  "title": "Certificates",
+  "description": "Academic and professional certificates earned throughout my education and training.",
+  "previewAriaLabel": "Preview certificate",
+  "openInNewTabLabel": "Open in new tab",
+  "labels": {
+    "preview": "Preview",
+    "openInNewTab": "Open in new tab"
+  },
+  "items": [
+    {
+      "id": "robotics",
+      "title": "Electronic Robotics Certificate",
+      "image": "/certificates/photo_2025-11-17_17-09-18.jpg",
+      "url": "/certificates/photo_2025-11-17_17-09-18.jpg"
+    },
+    {
+      "id": "high-school",
+      "title": "High School Diploma",
+      "image": "/certificates/high-school-diploma.jpg",
+      "url": "/certificates/high-school-diploma.pdf"
+    },
+    {
+      "id": "secondary",
+      "title": "Lower Secondary Certificate",
+      "image": "/certificates/secondary-certificate.jpg",
+      "url": "/certificates/secondary-certificate.pdf"
+    },
+    {
+      "id": "primary",
+      "title": "Primary Education Certificate",
+      "image": "/certificates/primary-certificate.jpg",
+      "url": "/certificates/primary-certificate.pdf"
+    }
+  ]
+}
