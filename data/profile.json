@@ -1,6 +1,6 @@
 {
   "personal": {
-  "name": "Moeng Kimheang",
+  "name": "Chea Saroeurn",
   "role": "Frontend Developer",
   "roles": [
     "Frontend Developer",
@@ -10,15 +10,15 @@
     "Mobile App Developer"
   ],
   "tagline": "I build responsive, accessible digital products with thoughtful interfaces and maintainable code.",
-  "location": "Tuol Kouk, Phnom Penh City, Cambodia",
-  "email": "heang015873174@gmail.com",
-  "phone": "+855 962943472",
+  "location": "Sangkat Dangkao, Khan Dangkao, Phnom Penh, Cambodia",
+  "email": "cheasaroeurn24@gmail.com",
+  "phone": "+855 10 944 686",
     "yearsOfExperience": "3+",
   "status": "Open to Opportunities",
   "currentFocus": "Vue.js, Nuxt, and full-stack web applications with Django REST Framework and PostgreSQL",
   "profileImage": "/images/profile.jpg",
-  "profileImageAlt": "Moeng Kimheang profile photo",
-  "cvUrl": "/Moeng-Kimheang-CV.pdf"
+  "profileImageAlt": "Chea Saroeurn profile photo",
+  "cvUrl": "/Chea-Saroeurn-CV.pdf"
   },
   "hero": {
     "eyebrow": "Hello, I am",
