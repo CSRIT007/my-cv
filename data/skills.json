@@ -60,7 +60,8 @@
       { "name": "Flutter", "icon": "i-simple-icons-flutter", "color": "#02569B" },
       { "name": "Dart", "icon": "i-simple-icons-dart", "color": "#0175C2" },
       { "name": "Android", "icon": "i-simple-icons-android", "color": "#3DDC84" },
-      { "name": "Kotlin", "icon": "i-simple-icons-kotlin", "color": "#7F52FF" }
+      { "name": "Kotlin", "icon": "i-simple-icons-kotlin", "color": "#7F52FF" },
+      { "name": "Swift", "icon": "i-simple-icons-swift", "color": "#F05138" }
     ]
   },
   {
@@ -71,7 +72,8 @@
       { "name": "Git", "icon": "i-simple-icons-git", "color": "#F05032" },
       { "name": "GitHub", "icon": "i-simple-icons-github" },
       { "name": "Figma", "icon": "i-simple-icons-figma", "color": "#A259FF" },
-      { "name": "Docker", "icon": "i-simple-icons-docker", "color": "#2496ED" }
+      { "name": "Docker", "icon": "i-simple-icons-docker", "color": "#2496ED" },
+      { "name": "Kubernetes", "icon": "i-simple-icons-kubernetes", "color": "#326CE5" }
     ]
   }
   ]

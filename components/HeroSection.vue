@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { personal, hero, heroSocialLinks, about } = usePortfolio()
+const { personal, hero, about } = usePortfolio()
 const { displayedRole } = useTypedRoles(personal.roles)
 
 const scrollToContact = () => scrollToSection('#contact')
@@ -36,9 +36,6 @@ const scrollToContact = () => scrollToSection('#contact')
           <h1 class="mt-4 text-4xl font-extrabold text-highlighted sm:text-5xl lg:text-6xl">
             {{ personal.name }}
           </h1>
-          <div class="mt-2 flex justify-center md:justify-start">
-            <SocialLinkButtons :links="heroSocialLinks" />
-          </div>
           <div class="mt-4 min-h-8 text-xl font-semibold text-primary sm:min-h-9 sm:text-2xl">
             <span data-testid="typed-role" aria-hidden="true">{{ displayedRole }}</span>
             <span

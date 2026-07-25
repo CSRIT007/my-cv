@@ -24,19 +24,19 @@
     {
       "id": "telegram",
       "label": "Telegram",
-      "href": "[TELEGRAM_URL]",
+      "href": "https://t.me/SaroeurnChea",
       "icon": "i-simple-icons-telegram"
     },
     {
       "id": "facebook",
       "label": "Facebook",
-      "href": "[FACEBOOK_URL]",
+      "href": "https://www.facebook.com/share/1BkAn4t9uU/",
       "icon": "i-simple-icons-facebook"
     },
     {
       "id": "tiktok",
       "label": "TikTok",
-      "href": "[TIKTOK_URL]",
+      "href": "https://www.tiktok.com/@chea_saroeurn",
       "icon": "i-simple-icons-tiktok"
     },
     {
