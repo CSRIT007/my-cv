@@ -16,7 +16,7 @@
     },
     {
       "role": "Web Application Developer",
-      "company": "Sekai Technologies",
+      "company": "ABC Technologies",
       "dateRange": "2022 - 2023",
       "achievements": [
         "Developed a web application for a client to manage their inventory and sales using Django REST Framework and Vue.js",
@@ -27,7 +27,7 @@
     },
     {
       "role": "Intern Web Application Developer",
-      "company": "AIKIMI Technology",
+      "company": "ABC Technology",
       "dateRange": "2021 - 2022",
       "achievements": [
         "Developed a web application for a client to manage their inventory and sales using Django REST Framework and Vue.js",
@@ -42,19 +42,19 @@
       "institution": "ACLEDA University of Business",
       "degree": "Bachelor of Computer Science and Engineering",
       "dateRange": "2023 - 2027",
-      "status": "Year 3 (Semester 1)",
+      "status": "Year 4 (Semester 1)",
       "description": "Majoring in Computer Science and Engineering with focus on Web Development, Database Design, and Software Engineering principles."
     },
     {
-      "institution": "Juang Jing Vocational High School (Taiwan)",
-      "degree": "High School of Electronic Robotics",
-      "dateRange": "2023 - 2024",
-      "description": "Specialized vocational training in electronic systems and robotics technology."
+      "institution": "National University of Management (Phnom Penh)",
+      "degree": "Bachelor of Business Administration",
+      "dateRange": "2011- 2015",
+      "description": "Specialized Finance and Banking."
     },
     {
-      "institution": "Bat Doeng High School",
-      "degree": "High School Diploma",
-      "dateRange": "2020 - 2023",
+      "institution": "Hun Sen Chambok High School",
+      "degree": "High School of General Education",
+      "dateRange": "2008 - 2011",
       "description": "Completed secondary education with strong performance in mathematics and sciences."
     }
   ]
