@@ -10,6 +10,9 @@
     "skills": [
       { "name": "Vue.js", "icon": "i-simple-icons-vuedotjs", "color": "#42B883" },
       { "name": "Nuxt", "icon": "i-simple-icons-nuxt", "color": "#00DC82" },
+      { "name": "React", "icon": "i-simple-icons-react", "color": "#61DAFB" },
+      { "name": "Next.js", "icon": "i-simple-icons-nextdotjs", "color": "#000000" },
+      { "name": "Angular", "icon": "i-simple-icons-angular", "color": "#DD0031" },
       { "name": "TypeScript", "icon": "i-simple-icons-typescript", "color": "#3178C6" },
       { "name": "JavaScript", "icon": "i-simple-icons-javascript", "color": "#D6A800" },
       { "name": "HTML5", "icon": "i-simple-icons-html5", "color": "#E34F26" },
@@ -35,6 +38,7 @@
     "description": "Applied AI tools and machine-learning workflows.",
     "skills": [
       { "name": "OpenAI", "icon": "i-simple-icons-openai", "color": "#10A37F" },
+      { "name": "Claude AI", "icon": "i-simple-icons-claude", "color": "#D97757" },
       { "name": "TensorFlow", "icon": "i-simple-icons-tensorflow", "color": "#FF6F00" },
       { "name": "PyTorch", "icon": "i-simple-icons-pytorch", "color": "#EE4C2C" },
       { "name": "Scikit-learn", "icon": "i-simple-icons-scikitlearn", "color": "#F7931E" }

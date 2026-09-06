@@ -23,22 +23,11 @@
       "url": "/certificates/academic-certificate.pdf"
     },
     {
-      "id": "high-school",
-      "title": "High School Diploma",
-      "image": "/certificates/high-school-diploma.jpg",
-      "url": "/certificates/high-school-diploma.pdf"
-    },
-    {
-      "id": "secondary",
-      "title": "Lower Secondary Certificate",
-      "image": "/certificates/secondary-certificate.jpg",
-      "url": "/certificates/secondary-certificate.pdf"
-    },
-    {
-      "id": "primary",
-      "title": "Primary Education Certificate",
-      "image": "/certificates/primary-certificate.jpg",
-      "url": "/certificates/primary-certificate.pdf"
+      "id": "leadership-digital-age",
+      "title": "Leadership in Digital Age",
+      "summary": "Workshop certificate — ACLEDA University of Business, September 13, 2025",
+      "image": "/certificates/leadership-digital-age.jpg",
+      "url": "/certificates/leadership-digital-age.jpg"
     }
   ]
 }

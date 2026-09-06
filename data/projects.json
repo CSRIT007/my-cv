@@ -22,7 +22,7 @@
   },
   {
     "id": "inventory-sales-management",
-    "title": "Inventory Manager",
+    "title": "Inventory Management System",
     "summary": "Inventory and sales dashboard",
     "description": "A responsive management application for products, stock, orders, users, authentication, and real-time sales reporting.",
     "techStack": ["Vue", "Django REST", "PostgreSQL", "JWT", "Axios"],
