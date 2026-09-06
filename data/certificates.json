@@ -11,8 +11,9 @@
     {
       "id": "bachelor",
       "title": "Bachelor",
-      "image": "",
-      "url": ""
+      "summary": "Bachelor of Finance and Banking — National University of Management",
+      "image": "/certificates/bachelor.jpg",
+      "url": "/certificates/bachelor.pdf"
     },
     {
       "id": "academic",
