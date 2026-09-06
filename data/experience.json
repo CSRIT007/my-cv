@@ -14,7 +14,7 @@
     {
       "role": "e-Commerce Web Application Developer",
       "company": "ACLEDA University of Business",
-      "dateRange": "2025 - 2025",
+      "dateRange": "2025 - 2026",
       "achievements": [
         "Built a full e-commerce web application with product catalog, cart, checkout, and order tracking, plus a separate admin dashboard for managing products, stock, orders, and users",
         "Developed the frontend using Vue.js (Composition API) and Tailwind CSS, with reusable components for product cards, filters, modals, and tables",
@@ -27,7 +27,7 @@
     {
       "role": "Web Application Developer",
       "company": "ABC Technologies",
-      "dateRange": "2024 - 2024",
+      "dateRange": "2025 - 2025",
       "achievements": [
         "Developed a web application for a client to manage their inventory and sales using Django REST Framework and Vue.js",
         "Implemented secure APIs using Django REST Framework, including authentication (JWT), role-based permissions (admin vs customer), and endpoints for products, orders, payments, and reports",
@@ -37,8 +37,8 @@
     },
     {
       "role": "Intern Web Application Developer",
-      "company": "ABC Technology",
-      "dateRange": "2025 - 2026",
+      "company": "DC Technology",
+      "dateRange": "2024 - 2024",
       "achievements": [
         "Developed a web application for a client to manage their inventory and sales using Django REST Framework and Vue.js",
         "Implemented secure APIs using Django REST Framework, including authentication (JWT), role-based permissions (admin vs customer), and endpoints for products, orders, payments, and reports",
