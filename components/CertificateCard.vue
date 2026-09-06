@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { isPlaceholderUrl } from '~/data/portfolio'
 import type { Certificate, CertificateLabels } from '~/types/portfolio'
 
 const props = defineProps<{
@@ -12,33 +13,42 @@ const isOpen = ref(false)
 const imageExtensions = /\.(jpe?g|png|webp|gif)$/i
 const pdfExtension = /\.pdf$/i
 
+const certificateUrl = computed(() => props.certificate.url?.trim() || '')
+const certificateImage = computed(() => props.certificate.image?.trim() || '')
+
 const thumbnailImage = computed(() => {
-  if (props.certificate.image) {
-    return props.certificate.image
+  if (certificateImage.value && imageExtensions.test(certificateImage.value)) {
+    return certificateImage.value
   }
 
-  if (imageExtensions.test(props.certificate.url)) {
-    return props.certificate.url
+  if (certificateUrl.value && imageExtensions.test(certificateUrl.value)) {
+    return certificateUrl.value
   }
 
   return undefined
 })
 
-const isPdf = computed(() => pdfExtension.test(props.certificate.url))
+const isPdf = computed(() => pdfExtension.test(certificateUrl.value))
 
-const fullPreviewSrc = computed(() => {
-  if (isPdf.value) {
-    return props.certificate.url
+const previewImage = computed(() => {
+  if (certificateImage.value && imageExtensions.test(certificateImage.value)) {
+    return certificateImage.value
   }
 
-  if (imageExtensions.test(props.certificate.url)) {
-    return props.certificate.url
+  if (certificateUrl.value && imageExtensions.test(certificateUrl.value)) {
+    return certificateUrl.value
   }
 
-  return props.certificate.image
+  return undefined
 })
 
+const hasPreview = computed(() => Boolean(previewImage.value || (certificateUrl.value && isPdf.value)))
+const hasFile = computed(() => Boolean(certificateUrl.value && !isPlaceholderUrl(certificateUrl.value)))
+
+const fullPreviewSrc = computed(() => previewImage.value || certificateUrl.value)
+
 const openPreview = () => {
+  if (!hasPreview.value) return
   isOpen.value = true
 }
 </script>
@@ -49,14 +59,21 @@ const openPreview = () => {
     body: 'flex flex-1 flex-col p-0 sm:p-0'
   }">
     <div class="flex h-full flex-col">
-      <div class="aspect-[4/3] w-full overflow-hidden bg-primary/10">
+      <button
+        type="button"
+        class="aspect-[4/3] w-full overflow-hidden bg-primary/10"
+        :class="hasPreview ? 'cursor-zoom-in' : 'cursor-default'"
+        :disabled="!hasPreview"
+        :aria-label="`${previewAriaLabel}: ${certificate.title}`"
+        @click="openPreview"
+      >
         <div class="flex h-full items-center justify-center p-3">
           <NuxtImg v-if="thumbnailImage" :src="thumbnailImage" :alt="certificate.title"
             class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
             loading="lazy" />
           <UIcon v-else name="i-lucide-award" class="size-20 text-primary" aria-hidden="true" />
         </div>
-      </div>
+      </button>
 
       <div class="flex flex-1 flex-col p-4">
         <div class="min-w-0">
@@ -68,35 +85,63 @@ const openPreview = () => {
           </p>
         </div>
 
-        <div class="mt-auto flex items-center gap-2 pt-5">
-          <UButton :label="labels.preview" trailing-icon="i-lucide-arrow-up-right" color="primary" size="sm"
-            :aria-label="`${previewAriaLabel}: ${certificate.title}`" @click="openPreview" />
-          <UTooltip :text="labels.openInNewTab">
-            <UButton :to="certificate.url" icon="i-lucide-external-link"
-              :aria-label="`${labels.openInNewTab}: ${certificate.title}`" color="neutral" variant="ghost" size="sm"
-              target="_blank" rel="noopener noreferrer" />
+        <div v-if="hasPreview || hasFile" class="mt-auto flex items-center gap-2 pt-5">
+          <UButton
+            v-if="hasPreview"
+            :label="labels.preview"
+            trailing-icon="i-lucide-arrow-up-right"
+            color="primary"
+            size="sm"
+            :aria-label="`${previewAriaLabel}: ${certificate.title}`"
+            @click="openPreview"
+          />
+          <UTooltip v-if="hasFile" :text="labels.openInNewTab">
+            <UButton
+              :to="certificateUrl"
+              icon="i-lucide-external-link"
+              :aria-label="`${labels.openInNewTab}: ${certificate.title}`"
+              color="neutral"
+              variant="ghost"
+              size="sm"
+              target="_blank"
+              rel="noopener noreferrer"
+            />
           </UTooltip>
         </div>
       </div>
     </div>
   </UCard>
 
-  <UModal v-model:open="isOpen" :title="certificate.title" :ui="{
-    content: 'w-[calc(100vw-2rem)] max-w-4xl max-h-[calc(100dvh-2rem)] overflow-hidden',
-    body: 'overflow-hidden p-2 sm:p-3'
-  }">
+  <UModal
+    v-model:open="isOpen"
+    :title="certificate.title"
+    fullscreen
+    scrollable
+    :ui="{
+      body: 'p-0 sm:p-0',
+      footer: 'shrink-0'
+    }"
+  >
     <template #body>
-      <div
-        class="flex h-[calc(100dvh-11rem)] max-h-[calc(100dvh-11rem)] items-center justify-center overflow-hidden rounded-lg border border-default bg-muted">
-        <iframe v-if="isPdf" :src="fullPreviewSrc" :title="certificate.title" class="h-full w-full bg-default" />
-        <NuxtImg v-else-if="fullPreviewSrc" :src="fullPreviewSrc" :alt="certificate.title"
-          class="max-h-full max-w-full object-contain" />
-        <p v-else class="text-sm text-toned">Preview not available.</p>
+      <div class="flex min-h-full justify-center bg-muted p-3 sm:p-6">
+        <img
+          v-if="previewImage"
+          :src="previewImage"
+          :alt="certificate.title"
+          class="h-auto w-full max-w-5xl object-contain shadow-sm"
+        >
+        <iframe
+          v-else-if="isPdf"
+          :src="fullPreviewSrc"
+          :title="certificate.title"
+          class="h-[calc(100dvh-9rem)] w-full bg-default"
+        />
+        <p v-else class="self-center text-sm text-toned">Preview not available.</p>
       </div>
     </template>
 
-    <template #footer>
-      <UButton :to="certificate.url" :label="labels.openInNewTab" icon="i-lucide-external-link" color="neutral"
+    <template v-if="hasFile" #footer>
+      <UButton :to="certificateUrl" :label="labels.openInNewTab" icon="i-lucide-external-link" color="neutral"
         variant="outline" target="_blank" rel="noopener noreferrer" block />
     </template>
   </UModal>

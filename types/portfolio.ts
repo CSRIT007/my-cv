@@ -118,7 +118,7 @@ export interface Certificate {
   id: string
   title: string
   summary?: string
-  url: string
+  url?: string
   image?: string
 }
 
@@ -136,10 +136,15 @@ export interface CertificatesData {
   items: Certificate[]
 }
 
+export interface EducationData {
+  title: string
+  description?: string
+  items: EducationEntry[]
+}
+
 export interface ExperienceData {
   title: string
   items: WorkExperience[]
-  education: EducationEntry[]
 }
 
 export interface HeaderContent {
@@ -230,5 +235,6 @@ export interface PortfolioData {
   certificates: Certificate[]
   certificatesContent: Omit<CertificatesData, 'items'>
   education: EducationEntry[]
+  educationContent: Omit<EducationData, 'items'>
   contact: ContactContent
 }

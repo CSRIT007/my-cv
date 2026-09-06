@@ -1,0 +1,25 @@
+{
+  "title": "Education",
+  "description": "Academic background and formal training.",
+  "items": [
+    {
+      "institution": "ACLEDA University of Business (Phnom Penh)",
+      "degree": "Bachelor of Computer Science and Engineering",
+      "dateRange": "2023 - 2027",
+      "status": "Year 4 (Semester 1)",
+      "description": "Majoring in Computer Science and Engineering with focus on Web Development, Database Design, and Software Engineering principles."
+    },
+    {
+      "institution": "National University of Management (Phnom Penh)",
+      "degree": "Bachelor of Business Administration",
+      "dateRange": "2011 - 2015",
+      "description": "Specialized Finance and Banking."
+    },
+    {
+      "institution": "Hun Sen Chambok High School (Kampong Speu)",
+      "degree": "High School of General Education",
+      "dateRange": "2008 - 2011",
+      "description": "Completed hight school education with strong performance in mathematics and general education."
+    }
+  ]
+}

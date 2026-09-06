@@ -9,16 +9,16 @@
   },
   "items": [
   {
-    "id": "ecommerce-admin-dashboard",
-    "title": "E-commerce Platform",
-    "summary": "Vue and Django online store",
-    "description": "A full-stack store with product browsing, cart, checkout, order tracking, inventory controls, and a sales dashboard for administrators.",
-    "techStack": ["Nuxt", "Vue", "Django REST", "PostgreSQL", "Tailwind CSS"],
-    "githubUrl": "https://github.com/CSRIT007/ecommerce-project",
-    "liveUrl": "https://ecommerce-demo.vercel.app",
-    "icon": "i-lucide-shopping-bag",
-    "accent": "primary",
-    "featured": true
+    "id": "school-management-system",
+    "title": "School Management System",
+    "summary": "Students, teachers, and attendance",
+    "description": "A school management system for managing students, teachers, courses, and attendance.",
+    "techStack": ["Vue", "Django REST", "PostgreSQL", "JWT", "Axios"],
+    "githubUrl": "https://github.com/CSRIT007/Management-school",
+    "liveUrl": "https://school.csrsms.com/",
+    "icon": "i-lucide-graduation-cap",
+    "accent": "info",
+    "featured": false
   },
   {
     "id": "inventory-sales-management",
@@ -30,6 +30,18 @@
     "liveUrl": "https://inventory-demo.vercel.app",
     "icon": "i-lucide-chart-no-axes-combined",
     "accent": "success",
+    "featured": false
+  },
+  {
+    "id": "hotel-management-system platform",
+    "title": "Hotel Management System Platform",
+    "summary": "Hotel management system",
+    "description": "A hotel management system for managing hotel reservations, rooms, customers, and payments.",
+    "techStack": ["Vue", "Django REST", "PostgreSQL", "JWT", "Axios"],
+    "githubUrl": "https://github.com/CSRIT007/hotel-booking",
+    "liveUrl": "http://52.74.40.203/",
+    "icon": "i-lucide-hotel",
+    "accent": "primary",
     "featured": false
   }
   ]

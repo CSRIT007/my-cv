@@ -17,6 +17,7 @@ export function usePortfolio() {
   const certificates = portfolioData.certificates
   const certificatesContent = portfolioData.certificatesContent
   const education = portfolioData.education
+  const educationContent = portfolioData.educationContent
   const contact = portfolioData.contact
 
   const socialLinks = portfolioData.socialLinks
@@ -48,6 +49,7 @@ export function usePortfolio() {
     certificates,
     certificatesContent,
     education,
+    educationContent,
     contact
   }
 }

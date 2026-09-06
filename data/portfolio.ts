@@ -2,6 +2,7 @@ import type {
   AboutContent,
   CertificatesData,
   ContactContent,
+  EducationData,
   ExperienceData,
   PortfolioData,
   ProfileData,
@@ -12,6 +13,7 @@ import type {
 import aboutJson from '~/data/about.json'
 import certificatesJson from '~/data/certificates.json'
 import contactJson from '~/data/contact.json'
+import educationJson from '~/data/education.json'
 import experienceJson from '~/data/experience.json'
 import profileJson from '~/data/profile.json'
 import projectsJson from '~/data/projects.json'
@@ -23,6 +25,7 @@ const about = aboutJson as AboutContent
 const skills = skillsJson as SkillsData
 const projects = projectsJson as ProjectsData
 const experience = experienceJson as ExperienceData
+const education = educationJson as EducationData
 const certificates = certificatesJson as CertificatesData
 const contact = contactJson as ContactContent
 const site = siteJson as SiteData
@@ -54,9 +57,7 @@ export const portfolioData: PortfolioData = {
   experienceContent: {
     title: experience.title
   },
-  certificates: certificates.items.filter(
-    (certificate) => !isPlaceholderUrl(certificate.url)
-  ),
+  certificates: certificates.items,
   certificatesContent: {
     title: certificates.title,
     description: certificates.description,
@@ -64,6 +65,10 @@ export const portfolioData: PortfolioData = {
     openInNewTabLabel: certificates.openInNewTabLabel,
     labels: certificates.labels
   },
-  education: experience.education,
+  education: education.items,
+  educationContent: {
+    title: education.title,
+    description: education.description
+  },
   contact
 }

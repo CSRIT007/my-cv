@@ -9,10 +9,17 @@
   },
   "items": [
     {
-      "id": "robotics",
-      "title": "Electronic Robotics Certificate",
-      "image": "/certificates/photo_2025-11-17_17-09-18.jpg",
-      "url": "/certificates/photo_2025-11-17_17-09-18.jpg"
+      "id": "bachelor",
+      "title": "Bachelor",
+      "image": "",
+      "url": ""
+    },
+    {
+      "id": "academic",
+      "title": "Academic Certificate",
+      "summary": "Official transcript from ACLEDA University of Business",
+      "image": "/certificates/academic-certificate.jpg",
+      "url": "/certificates/academic-certificate.pdf"
     },
     {
       "id": "high-school",

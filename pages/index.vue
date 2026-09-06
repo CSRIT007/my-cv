@@ -23,10 +23,10 @@ useSeoMeta({
     <AppHeader />
     <main id="main-content">
       <HeroSection />
-      <AboutSection />
+      <EducationSection />
+      <ExperienceSection />
       <SkillsSection />
       <ProjectsSection />
-      <ExperienceSection />
       <CertificatesSection />
       <ContactSection />
     </main>

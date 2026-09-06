@@ -2,7 +2,18 @@
   "title": "Experience",
   "items": [
     {
-      "role": "E-commerce Web Application Developer",
+      "role": "Civil Service Officer",
+      "company": "Ministry of Mines and Energy, Cambodia",
+      "dateRange": "2017 - Now",
+      "achievements": [
+        "Assist in the management of the Ministry of Mines and Energy's Financial Management System.",
+        "Assist in the management of the Ministry of Mines and Energy's Human Resource Management System.",
+        "Assist in the management of the Ministry of Mines and Energy's Project Management System.",
+        "Assist in the management of the Ministry of Mines and Energy's Non-tax Revenue Management System."
+      ]
+    },
+    {
+      "role": "e-Commerce Web Application Developer",
       "company": "ACLEDA University of Business",
       "dateRange": "2023 - 2025",
       "achievements": [
@@ -35,27 +46,6 @@
         "Designed PostgreSQL database schemas with relations between users, products, categories, stock, orders, and payments to keep data consistent and easy to query",
         "Integrated Axios with Vue for CRUD operations in the admin dashboard: admins can create/update products, adjust stock, confirm orders, and view sales analytics in real time"
       ]
-    }
-  ],
-  "education": [
-    {
-      "institution": "ACLEDA University of Business",
-      "degree": "Bachelor of Computer Science and Engineering",
-      "dateRange": "2023 - 2027",
-      "status": "Year 4 (Semester 1)",
-      "description": "Majoring in Computer Science and Engineering with focus on Web Development, Database Design, and Software Engineering principles."
-    },
-    {
-      "institution": "National University of Management (Phnom Penh)",
-      "degree": "Bachelor of Business Administration",
-      "dateRange": "2011- 2015",
-      "description": "Specialized Finance and Banking."
-    },
-    {
-      "institution": "Hun Sen Chambok High School",
-      "degree": "High School of General Education",
-      "dateRange": "2008 - 2011",
-      "description": "Completed secondary education with strong performance in mathematics and sciences."
     }
   ]
 }
