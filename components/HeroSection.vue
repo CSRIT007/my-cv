@@ -71,20 +71,17 @@ const scrollToContact = () => scrollToSection('#contact')
           </div>
         </div>
 
-        <div class="order-1 mx-auto w-full max-w-[13.2rem] sm:max-w-[17.6rem] md:order-2 md:max-w-[19.8rem] lg:max-w-[22rem]">
-          <div class="aspect-square overflow-hidden rounded-full border border-default bg-white p-4 shadow-sm sm:p-5">
-            <NuxtImg
-              :src="personal.profileImage"
-              :alt="personal.profileImageAlt"
-              width="689"
-              height="886"
-              fit="contain"
-              sizes="282px md:396px"
-              format="webp"
-              preload
-              class="h-full w-full object-contain object-center"
-            />
-          </div>
+        <div class="order-1 mx-auto w-full max-w-48 sm:max-w-64 md:order-2 md:max-w-72 lg:max-w-80">
+          <NuxtImg
+            :src="personal.profileImage"
+            :alt="personal.profileImageAlt"
+            width="720"
+            height="720"
+            sizes="256px md:360px"
+            format="webp"
+            preload
+            class="aspect-square w-full rounded-full border border-default bg-white object-contain object-center p-3 shadow-sm sm:p-4"
+          />
         </div>
       </div>
     </div>
