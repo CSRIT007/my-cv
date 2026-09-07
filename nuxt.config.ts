@@ -30,8 +30,11 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       link: [
-        { rel: 'icon', type: 'image/jpeg', href: '/images/profile.jpg' },
-        { rel: 'apple-touch-icon', href: '/images/profile.jpg' },
+        { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/profile-icon.png?v=4' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png?v=4' },
+        { rel: 'shortcut icon', type: 'image/png', href: '/profile-icon.png?v=4' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=4' },
+        { rel: 'apple-touch-icon-precomposed', sizes: '180x180', href: '/apple-touch-icon-precomposed.png?v=4' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {
