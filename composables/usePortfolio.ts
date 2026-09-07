@@ -2,7 +2,14 @@ import { portfolioData } from '~/data/portfolio'
 import type { NavItem, SocialLink } from '~/types/portfolio'
 
 export function usePortfolio() {
-  const personal = portfolioData.personal
+  const baseURL = useRuntimeConfig().app.baseURL
+  const withBase = (path?: string) => path ? publicAsset(path, baseURL) : path
+
+  const personal = {
+    ...portfolioData.personal,
+    profileImage: publicAsset(portfolioData.personal.profileImage, baseURL),
+    cvUrl: publicAsset(portfolioData.personal.cvUrl, baseURL)
+  }
   const hero = portfolioData.hero
   const about = portfolioData.about
   const navigation = portfolioData.navigation
@@ -10,11 +17,18 @@ export function usePortfolio() {
   const footer = portfolioData.footer
   const skills = portfolioData.skills
   const skillsContent = portfolioData.skillsContent
-  const projects = portfolioData.projects
+  const projects = portfolioData.projects.map((project) => ({
+    ...project,
+    image: withBase(project.image)
+  }))
   const projectsContent = portfolioData.projectsContent
   const experience = portfolioData.experience
   const experienceContent = portfolioData.experienceContent
-  const certificates = portfolioData.certificates
+  const certificates = portfolioData.certificates.map((certificate) => ({
+    ...certificate,
+    image: withBase(certificate.image),
+    url: withBase(certificate.url)
+  }))
   const certificatesContent = portfolioData.certificatesContent
   const education = portfolioData.education
   const educationContent = portfolioData.educationContent

@@ -78,9 +78,8 @@ const scrollToContact = () => scrollToSection('#contact')
             width="720"
             height="720"
             sizes="256px md:360px"
-            format="webp"
             preload
-            class="aspect-square w-full rounded-full border border-default bg-white object-contain object-center p-3 shadow-sm sm:p-4"
+            class="aspect-square w-full rounded-full border border-default bg-white object-cover object-center p-3 shadow-sm sm:p-4"
           />
         </div>
       </div>

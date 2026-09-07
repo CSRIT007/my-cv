@@ -37,7 +37,6 @@ const mediaClass = computed(() =>
           class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
           width="640"
           height="480"
-          format="webp"
           loading="lazy"
         />
         <div
