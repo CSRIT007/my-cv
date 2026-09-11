@@ -8,6 +8,9 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+  devServer: {
+    port: 3001
+  },
   colorMode: {
     preference: 'system',
     fallback: 'light',
@@ -21,6 +24,13 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ['/']
+    },
+    routeRules: {
+      '/favicon.ico': { headers: { 'Cache-Control': 'no-store, max-age=0' } },
+      '/favicon.png': { headers: { 'Cache-Control': 'no-store, max-age=0' } },
+      '/cs.png': { headers: { 'Cache-Control': 'no-store, max-age=0' } },
+      '/apple-touch-icon.png': { headers: { 'Cache-Control': 'no-store, max-age=0' } },
+      '/apple-touch-icon-precomposed.png': { headers: { 'Cache-Control': 'no-store, max-age=0' } }
     }
   },
   app: {
@@ -30,11 +40,14 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       link: [
-        { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/profile-icon.png?v=4' },
-        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png?v=4' },
-        { rel: 'shortcut icon', type: 'image/png', href: '/profile-icon.png?v=4' },
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=4' },
-        { rel: 'apple-touch-icon-precomposed', sizes: '180x180', href: '/apple-touch-icon-precomposed.png?v=4' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'apple-touch-icon-precomposed', href: '/apple-touch-icon-precomposed.png' },
+        { rel: 'icon', type: 'image/png', href: '/cs.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon.png' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'shortcut icon', href: '/favicon.ico' },
+        { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#2563EB' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {
